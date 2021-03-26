@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+
+*{
+    margin:0px;
+    padding:0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+
+    background-color:#01a3a4;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header{
+    
+    margin:70px 0px 0px 480px;
+    padding:10px 10px 10px 10px;
+    font-size:25px;
+    border:5px solid white;
+    border-radius:10px;
+    
+    text-align:center;
+    width:400px;
+    height:130px;
+    color:white;
+    background-color: #576574;
+    
+}
+
+.input-text {
+  display: inline;
+  margin: 0;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 10px;
+}
+
+.add-btn {
+    background-color: #8395a7;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 0.4rem;
+    display: inline-block;
+    border: none;
+    font-family: bold;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .add-btn:hover{
+box-shadow: 4px 4px 5px grey;;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn2 {
+    position:absolute;
+    right:35%;
+    
+    background: #f34541;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 0.4rem;
+    display: inline-block;
+    border: none;
   }
-}
+  .btn2:hover{
+    box-shadow: 4px 4px 5px white;
+  }
+
+  ul {
+    /* remove default padding and margin from ul*/
+    margin: 0px;
+    padding: 0px;
+  }
+  .list ul li {
+    display: block;
+    width: 408px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #cccccc;
+    padding: 10px;
+
+    margin-left: 483px;
+  }
+
+
+
+

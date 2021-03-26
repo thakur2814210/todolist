@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React,{useState} from 'react'
+import GetTask from './components/GetTask'
+import DisplayTask from './components/DisplayTask'
+import './App.css'
 
-export default App;
+     function App() {
+          const[item,setItem]=useState("");
+          const[list,setList]=useState([]);
+    
+        const getItem =(event)=>{
+          setItem(event.target.value)
+        }
+
+        const addItem=()=>{
+          setList((olditem)=>{
+           return [...olditem,item]
+          })
+             setItem("");
+         }
+
+        const deleteTask=(id)=>{
+          setList((olditem)=>{
+            return olditem.filter((curele,index)=>{
+                   return index!==id
+                   })
+
+            })
+
+        }
+
+      return (
+  
+        <div className="App">
+            <GetTask item={item} getItem={getItem} addItem={addItem}></GetTask>
+            <div className="list">
+               <ul>
+                   {list.map((curelement,index)=>{
+                     return <DisplayTask id={index} curelement={curelement} index={index} deleteTask={deleteTask}></DisplayTask>
+                      })}
+               </ul>
+              </div>
+
+        </div>
+              
+      );
+  
+     }
+
+       export default App;
